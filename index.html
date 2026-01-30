@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.K.O.K Import and Export</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <img src="imagens/logo.png" alt="B.K.O.K Logo" class="logo">
+
+        <div class="contact-box">
+            <h1>CONTACT US:</h1>
+            <p>
+                <img src="imagens/email.png.jpeg" class="icon">
+                <a href="mailto:bkoksales@gmail.com">bkoksales@gmail.com</a>
+            </p>
+            <p>
+                <img src="imagens/instagram.png.jpeg" class="icon">
+                <a href="https://www.instagram.com/bkokimportexport/" target="_blank">@bkokimportexport</a>
+            </p>
+        </div>
+    </header>
+
+    <!-- NAVEGAÇÃO -->
+    <nav>
+        <a href="#sobre">ABOUT</a>
+        <a href="#galeria">GALLERY</a>
+        <a href="#excursao">EXCURSIONS</a>
+        <a href="#contato">CONTACT</a>
+    </nav>
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section id="sobre">
+        <h2>ABOUT US</h2>
+        <p>
+            B.K.O.K Import & Export is specialized in exotic and rare fish species.
+            The rarer the fish, the more we like it. We aim for the best quality always,
+            and our clients' satisfaction is one of the most important things to us.
+        </p>
+    </section>
+
+    <!-- SEÇÃO DA GALERIA -->
+    <section id="galeria">
+        <h2>GALLERY</h2>
+        <p>
+            The fish on the photos were already sold, but we can eventually have units of them again,
+            if its of your interest, please contact us.
+        </p>
+    </section>
+    <section class="gallery">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="imagens/Giant tiger gold + Xanthic golden Rhinelepis strigosa.jpeg" alt="Exotic Fish 1"
+                    onclick="abrirMidia(0)">
+                <p>Giant tiger gold + Xanthic golden Rhinelepis strigosa</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagens/Giant tiger gold.jpeg" alt="Exotic Fish 2" onclick="abrirMidia(1)">
+                <p>Giant tiger gold</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagens/Red-Eye Albino Electrophorus Electricus.jpeg" alt="Exotic Fish 3"
+                    onclick="abrirMidia(2)">
+                <p>Red-Eye Albino Electrophorus Electricus</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagens/Red-Eye Albino Hoplias lacerdae.jpeg" alt="Exotic Fish 4" >
+                <p>Red-Eye Albino Hoplias lacerdae</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagens/Rhinelepis strigosa.jpeg" alt="Exotic Fish 5">
+                <p>Rhinelepis strigosa</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagens/Typhoon LDA105.jpeg" alt="Exotic Fish 6">
+                <p>Typhoon LDA105</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagens/Xanthic Golden Pseudacanthicus LDA105 Typhoon.jpeg" alt="Exotic Fish 7">
+                <p>Xanthic Golden Pseudacanthicus LDA105 Typhoon</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagens/Xanthic golden Rhinelepis strigosa.jpeg" alt="Exotic Fish 8" >
+                <p>Xanthic golden Rhinelepis strigosa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE EXCURSÕES -->
+    <section id="excursao" class="excursao">
+        <h2>EXCURSIONS</h2>
+        <p>
+            A little of our excursions to capture you guys some of the rarest fishes.
+        </p>
+    </section>
+
+    <section class="videos">
+        <div class="videos-container">
+            <video class="video-thumb">
+                <source src="videos/video-10.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CONTATO -->
+    <section id="contato">
+        <h2>CONTACT US</h2>
+        <p>EMAIL:</p>
+        <a href="mailto:bkoksales@gmail.com">bkoksales@gmail.com</a>
+        <p>INSTAGRAM:</p>
+        <a href="https://www.instagram.com/bkokimportexport/" target="_blank">@bkokimportexport</a>
+    </section>
+
+    <!-- SCRIPT PARA POPUP DE IMAGENS E VÍDEOS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const imagens = [
+                "imagens/Giant tiger gold + Xanthic golden Rhinelepis strigosa.jpeg",
+                "imagens/Giant tiger gold.jpeg",
+                "imagens/Red-Eye Albino Electrophorus Electricus.jpeg",
+                "imagens/Red-Eye Albino Hoplias lacerdae.jpeg",
+                "imagens/Rhinelepis strigosa.jpeg",
+                "imagens/Typhoon LDA105.jpeg",
+                "imagens/Xanthic Golden Pseudacanthicus LDA105 Typhoon.jpeg",
+                "imagens/Xanthic golden Rhinelepis strigosa.jpeg"
+            ];
+
+            const videos = [
+                "videos/video-10.mp4"
+            ];
+
+            let index = 0;
+            let tipo = ""; // "img" ou "video"
+            let startX = 0;
+
+            const popup = document.getElementById("popup");
+            const popupImg = document.getElementById("popup-img");
+            const popupVideo = document.getElementById("popup-video");
+
+            /* ---------- IMAGENS ---------- */
+            document.querySelectorAll(".gallery-item img").forEach((img, i) => {
+                img.addEventListener("click", () => {
+                    index = i;
+                    tipo = "img";
+                    abrirImagem();
+                });
+            });
+
+            function abrirImagem() {
+                popup.style.display = "flex";
+                popupImg.src = imagens[index];
+                popupImg.style.display = "block";
+                popupVideo.style.display = "none";
+                popupVideo.pause();
+            }
+
+            /* ---------- VÍDEOS ---------- */
+            document.querySelectorAll(".video-thumb").forEach((vid, i) => {
+                vid.addEventListener("click", () => {
+                    index = i;
+                    tipo = "video";
+                    abrirVideo();
+                });
+            });
+
+            function abrirVideo() {
+                popup.style.display = "flex";
+                popupVideo.src = videos[index];
+                popupVideo.style.display = "block";
+                popupImg.style.display = "none";
+                popupVideo.play();
+            }
+
+            /* ---------- FECHAR ---------- */
+            window.fecharPopup = function () {
+                popup.style.display = "none";
+                popupVideo.pause();
+            };
+
+            /* ---------- SWIPE ---------- */
+            popup.addEventListener("touchstart", e => {
+                startX = e.touches[0].clientX;
+            });
+
+            popup.addEventListener("touchend", e => {
+                const diff = startX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) < 50) return;
+
+                if (tipo === "img") {
+                    index += diff > 0 ? 1 : -1;
+                    if (index < 0) index = imagens.length - 1;
+                    if (index >= imagens.length) index = 0;
+                    popupImg.src = imagens[index];
+                }
+
+                if (tipo === "video") {
+                    index += diff > 0 ? 1 : -1;
+                    if (index < 0) index = videos.length - 1;
+                    if (index >= videos.length) index = 0;
+                    popupVideo.src = videos[index];
+                    popupVideo.play();
+                }
+            });
+        });
+    </script>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 B.K.O.K Import and Export.</p>
+        <p>All rights reserved.</p>
+    </footer>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup">
+        <span class="close" onclick="fecharPopup()">×</span>
+
+        <span class="nav left" onclick="mudarMidia(-1)">❮</span>
+        <span class="nav right" onclick="mudarMidia(1)">❯</span>
+
+        <img id="popup-img">
+        <video id="popup-video" controls></video>
+    </div>
+</body>
+
+</html>
