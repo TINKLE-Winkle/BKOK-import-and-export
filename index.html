@@ -9,42 +9,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="favicon.io/site.webmanifest">
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
+   <!-- CABEÇALHO -->
     <header class="header">
         <img src="imagens/logo.png" alt="B.K.O.K Logo" class="logo">
 
         <div class="contact-box">
             <h1>CONTACT US:</h1>
-            <p>
-                <img src="imagens/email.png.jpeg" class="icon">
-                <a href="mailto:bkoksales@gmail.com">bkoksales@gmail.com</a>
-            </p>
-            <p>
-                <img src="imagens/instagram.png.jpeg" class="icon">
-                <a href="https://www.instagram.com/bkokimportexport/" target="_blank">@bkokimportexport</a>
-            </p>
         </div>
     </header>
 
     <!-- NAVEGAÇÃO -->
     <nav>
+        <a href="#novidades">NEWS</a>
         <a href="#sobre">ABOUT</a>
         <a href="#galeria">GALLERY</a>
         <a href="#excursao">EXCURSIONS</a>
         <a href="#contato">CONTACT</a>
     </nav>
 
+    <!-- SEÇÃO DE NOVIDADES -->
+    <section id="novidades">
+        <h2>NEWS</h2>
+        <p>
+        </p>
+
+        <div class="news-section">
+            <div class="news-box">
+                <div class="news">
+                    <img src="imagens/image-1.jpg" class="news-item" onclick="abrirNewsPopup(0)">
+                    <img src="imagens/image-2.jpg" class="news-item" onclick="abrirNewsPopup(1)">
+
+                    <video class="news-item" controls onclick="abrirNewsPopup(2)">
+                        <source src="videos/image-3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="news-caption">
+                    NEW SPECIES AVAILABLE! CONTACT US FOR MORE INFORMATION.
+                    HYPOPTOMA SP. , GETS EVERYONES ATTENTION FOR ITS LITTLE SIZE BUT HUGE BEAUTY.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- SEÇÃO SOBRE NÓS -->
     <section id="sobre">
         <h2>ABOUT US</h2>
         <p>
-            B.K.O.K Import & Export is specialized in exotic and rare fish species.
-            The rarer the fish, the more we like it. We aim for the best quality always,
-            and our clients' satisfaction is one of the most important things to us.
+            B.K.O.K IMPORT & EXPORT IS SPECIALIZED IN EXOTIC AND RARE FISH SPECIES.
+            THE RARER THE FISH, THE MORE WE LIKE IT.
+            WE AIM FOR THE BEST QUALITY ALWAYS, AND OUR CLIENTS' SATISFACTION IS ONE OF THE MOST IMPORTANT THINGS TO US.
         </p>
     </section>
 
@@ -52,53 +73,52 @@
     <section id="galeria">
         <h2>GALLERY</h2>
         <p>
-            The fish on the photos were already sold, but we can eventually have units of them again,
-            if its of your interest, please contact us.
+            THE FISH ON THE PHOTOS WERE ALREADY SOLD, BUT WE CAN EVENTUALLY HAVE UNITS OF THEM AGAIN, IF ITS OF YOUR
+            INTEREST, PLEASE CONTACT US.
         </p>
     </section>
+
     <section class="gallery">
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="imagens/Giant tiger gold + Xanthic golden Rhinelepis strigosa.jpeg" alt="Exotic Fish 1"
-                    onclick="abrirMidia(0)">
-                <p>Giant tiger gold + Xanthic golden Rhinelepis strigosa</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Giant tiger gold + Xanthic golden Rhinelepis strigosa.jpeg" alt="Exotic Fish 1"
+                onclick="abrirImg(0)">
+            <p>GIANT TIGER GOLD + XANTHIC GOLDEN RHINELEPIS STRIGOSA</p>
+        </div>
 
-            <div class="gallery-item">
-                <img src="imagens/Giant tiger gold.jpeg" alt="Exotic Fish 2" onclick="abrirMidia(1)">
-                <p>Giant tiger gold</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Giant tiger gold.jpeg" alt="Exotic Fish 2" onclick="abrirImg(1)">
+            <p>GIANT TIGER GOLD</p>
+        </div>
 
-            <div class="gallery-item">
-                <img src="imagens/Red-Eye Albino Electrophorus Electricus.jpeg" alt="Exotic Fish 3"
-                    onclick="abrirMidia(2)">
-                <p>Red-Eye Albino Electrophorus Electricus</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Red-Eye Albino Electrophorus Electricus.jpeg" alt="Exotic Fish 3" onclick="abrirImg(2)">
+            <p>RED-EYE ALBINO ELECTROPHORUS ELECTRICUS</p>
+        </div>
 
-            <div class="gallery-item">
-                <img src="imagens/Red-Eye Albino Hoplias lacerdae.jpeg" alt="Exotic Fish 4" >
-                <p>Red-Eye Albino Hoplias lacerdae</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Red-Eye Albino Hoplias lacerdae.jpeg" alt="Exotic Fish 4" onclick="abrirImg(3)">
+            <p>RED-EYE ALBINO HOPLIAS LACERDAE</p>
+        </div>
 
-            <div class="gallery-item">
-                <img src="imagens/Rhinelepis strigosa.jpeg" alt="Exotic Fish 5">
-                <p>Rhinelepis strigosa</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Rhinelepis strigosa.jpeg" alt="Exotic Fish 5" onclick="abrirImg(4)">
+            <p>RHINELEPIS STRIGOSA</p>
+        </div>
 
-            <div class="gallery-item">
-                <img src="imagens/Typhoon LDA105.jpeg" alt="Exotic Fish 6">
-                <p>Typhoon LDA105</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Typhoon LDA105.jpeg" alt="Exotic Fish 6" onclick="abrirImg(5)">
+            <p>TYPHOON LDA105</p>
+        </div>
 
-            <div class="gallery-item">
-                <img src="imagens/Xanthic Golden Pseudacanthicus LDA105 Typhoon.jpeg" alt="Exotic Fish 7">
-                <p>Xanthic Golden Pseudacanthicus LDA105 Typhoon</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Xanthic Golden Pseudacanthicus LDA105 Typhoon.jpeg" alt="Exotic Fish 7"
+                onclick="abrirImg(6)">
+            <p>XANTHIC GOLDEN PSEUDACANTHICUS LDA105 TYPHOON</p>
+        </div>
 
-            <div class="gallery-item">
-                <img src="imagens/Xanthic golden Rhinelepis strigosa.jpeg" alt="Exotic Fish 8" >
-                <p>Xanthic golden Rhinelepis strigosa</p>
-            </div>
+        <div class="gallery-item">
+            <img src="imagens/Xanthic golden Rhinelepis strigosa.jpeg" alt="Exotic Fish 8" onclick="abrirImg(7)">
+            <p>XANTHIC GOLDEN RHINELEPIS STRIGOSA</p>
         </div>
     </section>
 
@@ -106,138 +126,130 @@
     <section id="excursao" class="excursao">
         <h2>EXCURSIONS</h2>
         <p>
-            A little of our excursions to capture you guys some of the rarest fishes.
+            A LITTLE OF OUR EXCURSIONS TO CAPTURE YOU GUYS SOME OF THE RAREST FISHES.
         </p>
     </section>
 
-    <section class="videos">
-        <div class="videos-container">
-            <video class="video-thumb">
-                <source src="videos/video-10.mp4" type="video/mp4">
+    <!-- SEÇÃO DE VÍDEOS -->
+
+    <!-- GRUPO 1: vídeos 2 a 5 -->
+    <div class="video-section">
+        <div class="video-grid">
+            <video controls onclick="abrirVideo(0)">
+                <source src="videos/video-2.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(1)">
+                <source src="videos/video-3.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(2)">
+                <source src="videos/video-4.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(3)">
+                <source src="videos/video-5.mp4" type="video/mp4">
             </video>
         </div>
+        <p class="video-caption">WE ARE MET WITH MANY WILDLIFE ENCOUNTERS ON OUR EXPEDITIONS</p>
+    </div>
+
+
+    <!-- GRUPO 2: vídeos 6 e 7 -->
+    <div class="video-section">
+        <div class="video-grid">
+            <video controls onclick="abrirVideo(4)">
+                <source src="videos/video-6.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(5)">
+                <source src="videos/video-7.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="video-caption">BEAUTIFUL LANDSCAPES AND PLACES FOUND IN ALL OF SOUTH AMERICA</p>
+    </div>
+
+    <!-- GRUPO 3: vídeos 8 a 12 -->
+    <div class="video-section">
+        <div class="video-grid">
+            <video controls onclick="abrirVideo(6)">
+                <source src="videos/video-8.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(7)">
+                <source src="videos/video-9.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(8)">
+                <source src="videos/video-10.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(9)">
+                <source src="videos/video-11.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(10)">
+                <source src="videos/video-12.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="video-caption">A BIT OF OUR CAPTURING PROCEDURES</p>
+    </div>
+
+    <!-- GRUPO 4: vídeo 13 sozinho -->
+    <div class="video-section">
+        <div class="video-grid">
+            <video controls onclick="abrirVideo(11)">
+                <source src="videos/video-13.mp4" type="video/mp4">
+            </video>
+            <video controls onclick="abrirVideo(12)">
+                <source src="videos/video-1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="video-caption">NOT ALL OF OUR CAPTURES ARE DONE EASILY…</p>
+    </div>
     </section>
 
     <!-- SEÇÃO DE CONTATO -->
     <section id="contato">
         <h2>CONTACT US</h2>
-        <p>EMAIL:</p>
-        <a href="mailto:bkoksales@gmail.com">bkoksales@gmail.com</a>
-        <p>INSTAGRAM:</p>
-        <a href="https://www.instagram.com/bkokimportexport/" target="_blank">@bkokimportexport</a>
+        <p class="contact-message">
+            WE ARE ALWAYS OPEN TO ANSWER ANY QUESTIONS YOU MAY HAVE, AND WE CAN ALSO PROVIDE MORE PHOTOS AND
+            VIDEOS OF THE FISHES IF YOU WANT TO SEE MORE DETAILS OF THEM.
+        </p>
     </section>
-
-    <!-- SCRIPT PARA POPUP DE IMAGENS E VÍDEOS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-
-            const imagens = [
-                "imagens/Giant tiger gold + Xanthic golden Rhinelepis strigosa.jpeg",
-                "imagens/Giant tiger gold.jpeg",
-                "imagens/Red-Eye Albino Electrophorus Electricus.jpeg",
-                "imagens/Red-Eye Albino Hoplias lacerdae.jpeg",
-                "imagens/Rhinelepis strigosa.jpeg",
-                "imagens/Typhoon LDA105.jpeg",
-                "imagens/Xanthic Golden Pseudacanthicus LDA105 Typhoon.jpeg",
-                "imagens/Xanthic golden Rhinelepis strigosa.jpeg"
-            ];
-
-            const videos = [
-                "videos/video-10.mp4"
-            ];
-
-            let index = 0;
-            let tipo = ""; // "img" ou "video"
-            let startX = 0;
-
-            const popup = document.getElementById("popup");
-            const popupImg = document.getElementById("popup-img");
-            const popupVideo = document.getElementById("popup-video");
-
-            /* ---------- IMAGENS ---------- */
-            document.querySelectorAll(".gallery-item img").forEach((img, i) => {
-                img.addEventListener("click", () => {
-                    index = i;
-                    tipo = "img";
-                    abrirImagem();
-                });
-            });
-
-            function abrirImagem() {
-                popup.style.display = "flex";
-                popupImg.src = imagens[index];
-                popupImg.style.display = "block";
-                popupVideo.style.display = "none";
-                popupVideo.pause();
-            }
-
-            /* ---------- VÍDEOS ---------- */
-            document.querySelectorAll(".video-thumb").forEach((vid, i) => {
-                vid.addEventListener("click", () => {
-                    index = i;
-                    tipo = "video";
-                    abrirVideo();
-                });
-            });
-
-            function abrirVideo() {
-                popup.style.display = "flex";
-                popupVideo.src = videos[index];
-                popupVideo.style.display = "block";
-                popupImg.style.display = "none";
-                popupVideo.play();
-            }
-
-            /* ---------- FECHAR ---------- */
-            window.fecharPopup = function () {
-                popup.style.display = "none";
-                popupVideo.pause();
-            };
-
-            /* ---------- SWIPE ---------- */
-            popup.addEventListener("touchstart", e => {
-                startX = e.touches[0].clientX;
-            });
-
-            popup.addEventListener("touchend", e => {
-                const diff = startX - e.changedTouches[0].clientX;
-                if (Math.abs(diff) < 50) return;
-
-                if (tipo === "img") {
-                    index += diff > 0 ? 1 : -1;
-                    if (index < 0) index = imagens.length - 1;
-                    if (index >= imagens.length) index = 0;
-                    popupImg.src = imagens[index];
-                }
-
-                if (tipo === "video") {
-                    index += diff > 0 ? 1 : -1;
-                    if (index < 0) index = videos.length - 1;
-                    if (index >= videos.length) index = 0;
-                    popupVideo.src = videos[index];
-                    popupVideo.play();
-                }
-            });
-        });
-    </script>
-
 
     <!-- RODAPÉ -->
     <footer>
-        <p>&copy; 2026 B.K.O.K Import and Export.</p>
-        <p>All rights reserved.</p>
+        <p>&copy; 2026 B.K.O.K IMPORT AND EXPORT.</p>
+        <p>ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <!-- POPUP -->
-    <div id="popup" class="popup">
-        <span class="close" onclick="fecharPopup()">×</span>
+    <!-- POPUP PARA IMAGENS -->
+    <div id="popupImgBox" class="popup">
+        <span class="close" onclick="fecharImg()">×</span>
+        <button class="prev" onclick="mudarImg(-1)">❮</button>
 
-        <span class="nav left" onclick="mudarMidia(-1)">❮</span>
-        <span class="nav right" onclick="mudarMidia(1)">❯</span>
+        <img id="popupImgElemento">
 
-        <img id="popup-img">
-        <video id="popup-video" controls></video>
+        <button class="next" onclick="mudarImg(1)">❯</button>
     </div>
+
+    <!-- POPUP PARA VÍDEOS -->
+    <div id="popupVideoBox" class="popup">
+        <span class="close" onclick="fecharVideo()">×</span>
+        <button class="prev" onclick="mudarVideo(-1)">❮</button>
+
+        <video id="popupVideoElemento" controls></video>
+
+        <button class="next" onclick="mudarVideo(1)">❯</button>
+    </div>
+
+    <!-- POPUP DE NOVIDADES -->
+    <div id="popup">
+        <span class="close" onclick="fecharNewsPopup()">&times;</span>
+
+        <button class="prev" onclick="mudarNews(-1)">&#10094;</button>
+
+        <div id="popup-content"></div>
+
+        <button class="next" onclick="mudarNews(1)">&#10095;</button>
+    </div>
+
+    <!-- SCRIPT JS -->
+    <script src="popup.js"></script>
+
 </body>
 
 </html>
